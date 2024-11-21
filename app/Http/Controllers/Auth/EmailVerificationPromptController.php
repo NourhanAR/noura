@@ -18,5 +18,6 @@ class EmailVerificationPromptController extends Controller
         return $request->user('merchant')->hasVerifiedEmail()
                     ? redirect()->route('merchant.index')
                     : view('merchant.auth.verify-email');
+
     }
 }
